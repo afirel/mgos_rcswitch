@@ -1,0 +1,21 @@
+name: mgos_rcswitch
+arch: esp8266
+version: 1.0
+skeleton_version: 2017-05-18
+sources:
+  - src
+  - ${mjs_path}/mjs.c
+  - ${arduino_drivers_path}/Arduino
+  - ${mgos_rcswitch_path}/src
+filesystem:
+  - fs
+  - ${mjs_path}/mjs/lib/api_*.js
+  - ${mongoose_os_path}/fw/mjs_api/api_*.js
+  - ${mongoose_os_path}/fw/platforms/${arch}/mjs_api/api_*.js
+  - ${mgos_rcswitch_path}/fs/api_rcswitch.js
+modules:
+  - origin: https://github.com/cesanta/mjs
+  - origin: https://github.com/cesanta/arduino-drivers
+  - origin: https://github.com/afirel/mgos_rcswitch
+build_vars:
+  MGOS_ENABLE_ARDUINO_API: 1

@@ -8,7 +8,7 @@ Note there's support for transmission only.
 ## Example
 
 mos.yml:
-```
+```yml
 name: mgos_rcswitch
 arch: esp8266
 version: 1.0
@@ -33,14 +33,14 @@ build_vars:
 ```
 
 main.c:
-```
+```C
 //...
 #include "mgos_rcswitch.h"
 //...
 ```
 
 Javascript:
-```
+```javascript
 load('api_rcswitch.js');
 
 // Optionally, configure the switch (note the values below are defaults):

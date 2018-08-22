@@ -17,4 +17,12 @@ extern "C" {
   void rcswitch_switch_off(const char* group, const char* device) {
     rcswitch.switchOff(group, device);
   }
+
+  void rcswitch_send(unsigned long code, unsigned int length) {
+    rcswitch.send(code, length);
+  }
+
+  void rcswitch_sendWord(const char* sCodeWord) {
+    rcswitch.send(sCodeWord);
+  }
 }
